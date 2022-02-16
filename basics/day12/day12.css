@@ -1,0 +1,120 @@
+*{
+    margin: 0px;
+    padding: none;
+}
+
+
+header{
+    background-color: rgb(15, 87, 109);
+}
+
+ol {
+    display: flex;
+    /* border: 4px solid #e60202; */
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+a{
+    color: #FFF;
+
+}
+
+body{
+    background-color: rgba(208, 232, 230, 1);
+}
+
+
+#bottom{
+    position: relative;
+    height: 100vh;
+}
+
+#about-us-img{
+    width: 100%;
+}
+
+.about-us-container{
+    width: 70%;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(180deg, rgba(207, 224, 239, 0) 0%, #1D6881 100%);
+    padding: 30px;
+    z-index: 5;
+}
+
+#about-us-heading{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Red Hat Text', sans-serif;
+    font-size: 50px;
+    color: rgb(62, 79, 228);
+}
+
+#about-us-para{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Red Hat Text', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+/* .slanted-div {
+    position: relative;
+    padding: 200px 0;
+    background: #128c7e;
+    overflow: visible;
+    z-index: 1;
+  }
+  
+  /* where the magic happens */
+/* .slanted-div:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    bottom: 0;
+    transform-origin: left bottom;
+    transform: skewY(-3deg);
+  } */
+
+
+footer{
+    position: relative;
+    /* background: linear-gradient(180deg, #0F576D 12.55%, #5EB4DD 100%); */
+    /* background: linear-gradient(180deg, rgba(207, 224, 239, 0) 0%, #1D6881 100%); */
+    background-color: rgba(0, 0, 1);
+    /* background: wheat; */
+    width: 100%;
+    height: 150px;
+    top: -40px;
+    color: #FFF;
+    z-index: 2;
+    overflow: visible;
+}
+
+footer:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    bottom: 0;
+    transform-origin: left bottom;
+    transform: skewY(353deg);
+}
+
+footer ul {
+      width: 80%;
+      position:absolute;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+footer ul li {
+    color: green;
+}

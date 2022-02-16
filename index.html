@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Increment number</title>
+</head>
+
+<body>
+    This is the cart value : <span id="numIncrement">1</span>
+    <button onclick="increase()"> Increase amount</button>
+
+
+    <input type="text" id="input1" onblur="getValue()" />
+</body>
+<script>
+    function increase() {
+        var numb = document.getElementById("numIncrement")
+        numb.innerHTML = Number(numb.innerHTML) + 1
+
+    }
+
+    function getValue(){
+        var inputText = document.getElementById("input1")
+        console.log('value:',inputText.value)
+    }
+</script>
+
+</html>

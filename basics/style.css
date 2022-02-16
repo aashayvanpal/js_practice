@@ -1,0 +1,24 @@
+p {
+    background-color: rgba(0, 0, 100, 0.1);
+}
+
+p:hover {
+    background: linear-gradient(to bottom right, rgba(0, 0, 100, 0.5), rgba(0, 0, 100, 1))
+}
+
+.converter-container{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    background-color: purple;
+}
+
+.currency-input{
+    padding: 10px;
+    font-size: 22px;
+}
+
+.form-text{
+    font-size: 22px;
+}

@@ -1,0 +1,10 @@
+https://www.educative.io/blog/javascript-data-structures
+
+What are data structures
+1. Array
+2. Queues
+3. Linked List
+4. Trees
+5. Graphs
+6. Hashtable / map
+
