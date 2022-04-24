@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style-batman.css">
+    <title>Project Batman</title>
+</head>
+<body>
+    <div id="navigation-container">
+        <ul class="nav-bar">
+            <li class="nav-item">Home</li>
+            <li class="nav-item">Inventory</li>
+            <li class="nav-item">Scan</li>
+        </ul>
+    </div>
+<div id="base-container">
+    <img src="../images/moon2.png" class="circle"/>
+    <div class="slanted-building" id="building1"></div>
+    <div class="slanted-building" id="building2"></div>
+
+    <div class="slanted-building" id="batrang"></div>
+    <div class="baterang" id="batrang1"></div>
+    <div class="baterang" id="batrang2"></div>
+    <div class="baterang" id="batrang3"></div>
+    <div class="baterang" id="batrang4"></div>
+
+    <img src="../images/batman-character.png" onclick="sayBatman()" id="batman" alt="batman">
+    <h1 id="text-item1">BATMAN</h1>
+    <h1 id="text-item2">BEYOND</h1>
+</div>
+<div id="base2-container">
+    <div class="info-container">
+        <h1>The Batman -</h1>
+        Batman is a superhero who appears in American comic books published by DC Comics. The character was created by artist Bob Kane and writer Bill Finger, and debuted in the 27th issue of the comic book Detective Comics on March 30, 1939.
+    </div>
+</div>
+<script>
+    function sayBatman(){
+        var batman = document.getElementById('batman')
+        batman.style.transition = "3s"
+        batman.style.top = "20px"
+        batman.style.transform = "translate(-500px,350px) rotateY(-190deg)"
+        alert('I am batman!')
+        // batman.focus()
+    }
+</script>
+</body>
+</html>

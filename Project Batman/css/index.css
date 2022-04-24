@@ -1,0 +1,32 @@
+*{
+    margin:0px;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+}
+
+#navigation-container{
+    height: 150px;
+    background-color: rgb(0, 0, 0);
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+    align-items: center;
+}
+.nav-item{
+    font-size: 45px;
+    list-style-type: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.nav-item:hover{
+    color: red;
+    cursor: pointer;
+    transform: rotate(7deg);
+}
