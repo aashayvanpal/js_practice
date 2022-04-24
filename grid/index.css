@@ -2,19 +2,15 @@
 body {
     margin: 0px;
 }
-
 body {
     background-color: rgb(196, 219, 212);
 }
-
 #box1 {
     grid-area: box1;
 }
-
 #box2 {
     grid-area: box2;
 }
-
 #box3 {
     grid-area: box3;
 }

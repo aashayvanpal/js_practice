@@ -1,0 +1,49 @@
+import fetch from "node-fetch";
+
+
+// var count= 0
+// const message = setInterval(() => {
+// console.log('this is the message')
+// count++
+// if (count == 3) {
+// clearInterval(message)
+// }
+// }, 3000)
+
+
+
+// const timer = setTimeout(function (){
+// console.log(1)
+// },3000)
+
+
+// console.log(2)
+// console.log(3)
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    hi
+</body>
+<script>
+    async function getUsers() {
+        const users = await fetch("https://api.randomuser.me/")
+        .then(users => {
+            console.log(users.json())
+        }).catch(err => {
+            console.log(err)
+        })
+    }
+
+    getUsers()
+</script>
+
+</html>
