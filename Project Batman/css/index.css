@@ -7,7 +7,7 @@ body {
     height: 100%;
 }
 
-#navigation-container {
+#navigation-container-home {
     height: 150px;
     background-color: rgb(0, 0, 0);
 }
@@ -59,27 +59,34 @@ body {
     background-color: rgb(70, 70, 77);
     clip-path: polygon(27% 0, 100% 0, 100% 0, 100% 82%, 74% 100%, 0 100%, 0 100%, 0 24%);
     width: 50%;
-    transition: 1s;
+    /* transition: 1s; */
 }
 
 .character-ironman-container {
     background-color: rgb(129, 26, 22);
+    clip-path: polygon(27% 0, 100% 0, 100% 0, 100% 82%, 74% 100%, 0 100%, 0 100%, 0 24%);
     width: 50%;
 }
 
 .character-batman-container:hover {
     background-color: black;
-    animation: batman-container-animate ease 5s;
+    animation: container-animate linear 2s;
 }
 
-@keyframes batman-container-animate {
+@keyframes container-animate {
     0% {
         clip-path: polygon(27% 0, 100% 0, 100% 0, 100% 82%, 74% 100%, 0 100%, 0 100%, 0 24%);
     }
 
-    100% {
-        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    50% {
+
+        clip-path: polygon(0% 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 0%);
     }
+
+    /* 100% {
+        clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0% 100%);
+
+    } */
 }
 
 .character-batman-container:hover p,
@@ -87,10 +94,12 @@ body {
     font-size: 40px;
     transition: 1s;
     letter-spacing: 10px;
+    font-weight: bold;
 
 }
 
 .character-ironman-container:hover {
     background-color: rgb(96, 7, 4);
     transition: 1s;
+    animation: container-animate linear 2s;
 }

@@ -1,11 +1,17 @@
 #ironman-container {
-    background-color: rgb(110, 12, 12);
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(110, 12, 12));
     position: relative;
     height: 1200px;
 }
 
 .character {
     position: absolute;
+}
+
+#navigation-container-ironman {
+    height: 150px;
+    background-color: rgb(0, 0, 0);
+    /* background-image: linear-gradient(rgb(0, 0, 0), rgb(110, 12, 12)) */
 }
 
 #ironman-character {
@@ -32,4 +38,10 @@
     100% {
         transform: rotate(360deg);
     }
+}
+
+#ironman-text {
+    position: absolute;
+    width: 100%;
+    z-index: 0;
 }
