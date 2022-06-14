@@ -2,3 +2,4 @@ add instructors for project management as Ironman and Batman , they help you dev
 
 Currently working :
 bug fix : baterang image is lost 
+adding HUD effects
