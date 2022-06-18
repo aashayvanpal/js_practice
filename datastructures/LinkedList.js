@@ -122,7 +122,7 @@ class LinkedList {
     // removeElement(element)
     // removes a given element from the
     // list
-    removeElement(element) { 
+    removeElement(element) {
         var current = this.head;
         var prev = null;
 
@@ -147,6 +147,27 @@ class LinkedList {
     }
 
     // Helper Methods
+
+
+    // finds the index of element
+    indexOf(element) {
+        var count = 0;
+        var current = this.head;
+
+        // iterate over the list
+        while (current != null) {
+            // compare each element of the list
+            // with given element
+            if (current.element === element)
+                return count;
+            count++;
+            current = current.next;
+        }
+
+        // not found
+        return -1;
+    }
+
     // isEmpty
     // size_Of_List
     // PrintList
