@@ -169,6 +169,11 @@ class LinkedList {
     }
 
     // isEmpty
+    // checks the list for empty
+    isEmpty() {
+        return this.size == 0;
+    }
+    
     // size_Of_List
     // PrintList
 }
