@@ -173,7 +173,11 @@ class LinkedList {
     isEmpty() {
         return this.size == 0;
     }
-    
+
     // size_Of_List
+    // gives the size of the list
+    size_of_list() {
+        console.log(this.size);
+    }
     // PrintList
 }
