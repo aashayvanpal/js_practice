@@ -1,0 +1,35 @@
+1.Find all the inactive users with sort by created_at desc
+
+db.users.aggregate([
+  { $match : { is_active : false} },
+  {$sort: {'created_at': -1}}
+])
+
+
+2.Find all the users above 18 years of age
+db.user_profiles.aggregate([
+  { $match : { 'age':{$gt:18} }}
+])
+
+
+3.Find all the users where the marital_status = null
+//im not sure about null value check , i have replaced it with "this is null" string
+db.user_profiles.aggregate(
+   [
+        {$match: { 'marital_status':{'$exists':true}}},
+      {
+         $project: {
+            
+            description: { $ifNull: [ "$marital_status", "this is null" ] }
+         }
+      }
+   ]
+)
+
+4.Find all the users born after 2000
+db.user_profiles.aggregate(
+   [
+        {$match: {"dob":{ $gte : "2000-01-01T00:00:00.000Z"}}}
+   ]
+)
+
