@@ -179,5 +179,17 @@ class LinkedList {
     size_of_list() {
         console.log(this.size);
     }
+
     // PrintList
+    // prints the list items
+    printList() {
+        var curr = this.head;
+        var str = "";
+        while (curr) {
+            str += curr.element + " ";
+            curr = curr.next;
+        }
+        console.log(str);
+    }
+
 }
