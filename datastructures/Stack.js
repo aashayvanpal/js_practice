@@ -26,6 +26,13 @@ class Stack {
         return this.items.pop();
     }
     // peek()
+    // peek function
+    peek() {
+        // return the top most element from the stack
+        // but does'nt delete it.
+        return this.items[this.items.length - 1];
+    }
+
     // isEmpty()
     // printStack()
 }
