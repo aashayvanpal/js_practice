@@ -34,5 +34,11 @@ class Stack {
     }
 
     // isEmpty()
+    // isEmpty function
+    isEmpty() {
+        // return true if stack is empty
+        return this.items.length == 0;
+    }
+    
     // printStack()
 }
