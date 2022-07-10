@@ -13,6 +13,15 @@ class Queue {
         this.items.push(element);
     }
     // dequeue()
+    // dequeue function
+    dequeue() {
+        // removing element from the queue
+        // returns underflow when called 
+        // on empty queue
+        if (this.isEmpty())
+            return "Underflow";
+        return this.items.shift();
+    }
     // front()
     // isEmpty()
     // printQueue()
