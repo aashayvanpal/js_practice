@@ -23,6 +23,15 @@ class Queue {
         return this.items.shift();
     }
     // front()
+
+    // front function
+    front() {
+        // returns the Front element of 
+        // the queue without removing it.
+        if (this.isEmpty())
+            return "No elements in Queue";
+        return this.items[0];
+    }
     // isEmpty()
     // printQueue()
 }
