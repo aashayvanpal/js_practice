@@ -33,5 +33,10 @@ class Queue {
         return this.items[0];
     }
     // isEmpty()
+    // isEmpty function
+    isEmpty() {
+        // return true if the queue is empty.
+        return this.items.length == 0;
+    }
     // printQueue()
 }
