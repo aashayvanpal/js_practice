@@ -39,4 +39,12 @@ class Queue {
         return this.items.length == 0;
     }
     // printQueue()
+
+    // printQueue function
+    printQueue() {
+        var str = "";
+        for (var i = 0; i < this.items.length; i++)
+            str += this.items[i] + " ";
+        return str;
+    }
 }
