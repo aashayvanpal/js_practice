@@ -150,3 +150,10 @@ g.printGraph();
 console.log("BFS");
 g.bfs('A');
 
+
+// prints
+// DFS
+// A B C E D F
+console.log("DFS");
+g.dfs('A');
+
