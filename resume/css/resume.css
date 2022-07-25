@@ -18,6 +18,7 @@
 
 .div2 {
     grid-area: 1 / 2 / 2 / 3;
+    background-color: #BCE4FF;
 }
 
 .div3 {
