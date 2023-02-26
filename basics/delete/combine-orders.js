@@ -1,5 +1,22 @@
 // task -> combine all orders , seperate customer 
 // combine 2 orders and make into given format
+
+/**
+ 
+
+// convert the orders in this format for rendering purpose 
+Order{
+    Dates:[
+        {date1:{ Breakfast:{items:[],quries,eventName,NoOfPeople,eventDate,eventTime,homeDelievery,service},
+            Lunch:{items:[],quries,eventName,NoOfPeople,eventDate,eventTime,homeDelievery,service},
+            Dinner:{items:[],quries,eventName,NoOfPeople,eventDate,eventTime,homeDelievery,service}
+            }}
+    	
+    ]
+}
+ */
+
+
 const order1 = {
     "_id": "628680d825e6670b978dfac1",
     "items": [
@@ -206,6 +223,7 @@ const extractOrderInfo = (order) => {
         queries: order.customer.queries,
         homeDelivery: order.customer.homeDelivery,
         service: order.customer.service,
+        items: order.items
     }
 }
 
@@ -218,37 +236,49 @@ if (order1.customer.fullName === order2.customer.fullName) {
     // Step 2: create the customer object
     // console.log('customer extracted:', customer)
 
+    order3.customer = customer
+    // console.log(order3)
+
+
     // Step 3: Creating Dates[]:
     const date = extractOrderInfo(order1)
     // console.log('Date extracted:', date)
 
-    console.log(date)
-    order3.customer = customer
-    order3.Dates[date.eventDate] = date
+
+    // if date is same : check for eventTime
+    // if eventTime > 7am && eventTime < 11am => add breakfast Property
+    // if eventTime > 11am && eventTime < 4pm => add Lunch Property
+    // if eventTime > 4am && eventTime < 12pm => add Dinner Property
+
+    // add items[],quries,eventName,NoOfPeople,eventDate,eventTime,homeDelievery,service properties based on eventTime
+
+
+    const dateObj = new Date(date.eventDate);
+    let hour = dateObj.getUTCHours();
+    console.log(hour);
+    if ((hour >= 7) && (hour < 11)) {
+        console.log('Breakfast time!')
+        order3.Dates[date.eventDate] = { 'Breakfast': date }
+    }
+    else if ((hour >= 11) && (hour < 17)) {
+        console.log('Lunch time!')
+        order3.Dates[date.eventDate] = { 'Lunch': date }
+    }
+    else if (hour >= 17 && hour <= 24) {
+        console.log('Dinner time!')
+        order3.Dates[date.eventDate] = { 'Dinner': date }
+    }
+    else {
+        console.log('invalid time!')
+    }
+
     // console.log(order3)
+    // console.log(order3.Dates['2022-05-19T17:38:37.715Z'].Dinner.date.items)
 
-    // order3.Dates.push[]
 
+    order3.customer = customer
+    console.log(order3)
+    console.log(order3.Dates['2022-05-19T17:38:37.715Z'].Dinner.items)
 
 }
 else { console.log('names do not match error !') }
-
-
-
-// if date is same : check for eventTime
-// if eventTime > 7am && eventTime < 11am => add breakfast Property
-// if eventTime > 11am && eventTime < 4pm => add Lunch Property
-// if eventTime > 4am && eventTime < 12pm => add Dinner Property
-
-// add items[],quries,eventName,NoOfPeople,eventDate,eventTime,homeDelievery,service properties based on eventTime
-
-
-
-
-// const order3 =
-
-//     order3.customer = order1.customer
-// order3.Dates[order1.customer.eventDate].push(...order1.items)
-// console.log(order3)
-
-// console.log(order3)
